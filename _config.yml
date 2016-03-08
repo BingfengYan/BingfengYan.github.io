@@ -1,46 +1,51 @@
 # Site wide configuration
 
-title:			颜丙峰
-description: 	This is 颜丙峰 blogs
-logo: 			logo.jpg # 120x120 px default image used for Twitter summary card
-teaser: 		/teaser/IMG_0405.JPG # 400x250 px default teaser image used in image archive grid
-locale:
+title:
+description:
+logo: # 120x120 px default image used for Twitter summary card
+teaser: # 400x250 px default teaser image used in image archive grid
+locale: en
 url:
-
-default:
-    -
-        scope:
-            type: "article"
-        values:
-            ads: false
-            toc: false 
-
 
 # Jekyll configuration
 
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 permalink: /:categories/:title/
-markdown: kramdown
 kramdown:
-    input: GFM
-highlighter: pygments
+  toc_levels: 1..2
+highlighter: rouge
 gems:
   - jekyll-sitemap
+  - jekyll-gist
+
+
+# Octopress configuration
+
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: article
+page_layout: article
+
+# Format titles with titlecase?
+titlecase: true
 
 
 # Site owner
-owner: 
-  name:		颜丙峰
-  email:	fxyaun@163.com
+owner:
+  name:
+  email:
   twitter:
   google:
     ad-client:
     ad-slot:
-  bio: 
-  avatar: logo.jpg # 160x160 px image for author byline
-disqus-shortname: cenalulu
+  bio:
+  avatar: bio-photo.jpg # 160x160 px image for author byline
+  disqus-shortname:
 
 
 exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]

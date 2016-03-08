@@ -1,4 +1,9 @@
 _site
-.sass-cache
 .DS_Store
-_includes/env.html
+*.sublime-project
+*.sublime-workspace
+codekit-config.json
+node_modules
+_asset_bundler_cache
+.sass-cache
+.jekyll-metadata
