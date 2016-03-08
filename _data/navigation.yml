@@ -1,6 +1,19 @@
 # Site navigation links
 
-- title:
-  url:
+- title:		Home
+  url:			/
+  excerpt:
+  image:
+  
+  
+- title:		Home
+  url:			/
+  excerpt:
+  image:
+  
+  
+  
+- title:		other
+  url:			/other/
   excerpt:
   image:

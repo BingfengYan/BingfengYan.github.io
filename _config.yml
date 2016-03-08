@@ -1,10 +1,10 @@
 # Site wide configuration
 
-title:
-description:
-logo: # 120x120 px default image used for Twitter summary card
-teaser: # 400x250 px default teaser image used in image archive grid
-locale: en
+title:			颜丙峰
+description:	颜丙峰的博客
+logo: 			default.jpg
+teaser: 		IMG_0317.JPG
+locale:
 url:
 
 # Jekyll configuration
@@ -37,14 +37,14 @@ titlecase: true
 
 # Site owner
 owner:
-  name:
-  email:
+  name:			颜丙峰
+  email:		fxyaun@163.com
   twitter:
   google:
     ad-client:
     ad-slot:
   bio:
-  avatar: bio-photo.jpg # 160x160 px image for author byline
+  avatar: default.jpg
   disqus-shortname:
 
 
