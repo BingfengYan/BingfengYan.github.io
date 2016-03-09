@@ -285,4 +285,9 @@ $ git push origin gh-pages
 2 使用模版
 参考[Jekyll&Github Pages博客模板挑选和配置](http://cenalulu.github.io/jekyll/choose-a-template-for-your-blog/),我的就是仿真这个还得，他的官方网址是[Jekyll Themes](https://mademistakes.com/work/jekyll-themes/)  
 接下来就是要学习怎么把网页做的漂亮些：  
-学习jekyll和markdown语法
+学习jekyll和markdown语法  
+
+
+
+
+<a href="{{ site.baseurl }}/index.html">Go back</a>
