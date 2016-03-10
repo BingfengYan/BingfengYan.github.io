@@ -3,13 +3,13 @@
 - title:		Home
   url:			/
   excerpt:
-  image:
+  image:		/default.jpg
   
   
 - title:		cv
   url:			/cv/
   excerpt:
-  image:
+  image:		/CV.jpg
   
   
   
@@ -17,3 +17,13 @@
   url:			/other/
   excerpt:
   image:
+  
+- title:		life
+  url:			/life/
+  excerpt:
+  image:		/life.JPG
+  
+- title:		aboutme
+  url:			/about/
+  excerpt:
+  image:		/me.JPG

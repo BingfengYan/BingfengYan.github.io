@@ -3,6 +3,8 @@ layout: article
 title:  "使用jekyll在github搭建博客"
 date:   2016-03-07 20:13:18 +0800
 categories: other
+image:
+    teaser: /other/使用jekyll在github搭建博客/微信截图_20160310184438.png
 ---
 
 > 本文主要讲述在github创建个人主页，安装jekyll，下载修改模板，上传模版
