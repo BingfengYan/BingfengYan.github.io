@@ -24,7 +24,7 @@ gems:
 
 
 paginate: 5
-paginate_path: "page:num"
+paginate_path: "posts/:num"
 # Octopress configuration
 
 # Default extensions
