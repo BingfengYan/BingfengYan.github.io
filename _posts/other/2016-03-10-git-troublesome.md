@@ -1,7 +1,7 @@
 ---
 layout: article
 title:  "git使用中遇到的问题"
-categories: CV
+categories: other
 image:
     teaser: /other/gittroublesome/20160310184456.png
 ---
