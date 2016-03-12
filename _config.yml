@@ -4,7 +4,7 @@ title:			颜丙峰
 description:	颜丙峰的博客
 logo: 			default.jpg
 teaser: 		IMG_0317.JPG
-locale:
+locale:	
 url:
 
 # Jekyll configuration
@@ -23,9 +23,13 @@ gems:
   - jekyll-paginate
 
 
-paginate: 5
+paginate: 12
 paginate_path: "posts/:num"
 # Octopress configuration
+
+# my swiftype
+swift_search:
+ enable:true
 
 # Default extensions
 post_ext: md

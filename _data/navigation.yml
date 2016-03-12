@@ -2,28 +2,28 @@
 
 - title:		Home
   url:			/
-  excerpt:
+  excerpt:		"主页"
   image:		/default.jpg
   
   
 - title:		cv
   url:			/cv/
-  excerpt:
+  excerpt:		"计算机视觉"
   image:		/CV.jpg
   
   
   
 - title:		other
   url:			/other/
-  excerpt:
+  excerpt:		"其他学术"
   image:
   
 - title:		life
   url:			/life/
-  excerpt:
+  excerpt:		“生活琐事”
   image:		/life.JPG
   
 - title:		aboutme
   url:			/about/
-  excerpt:
+  excerpt:		“关于我”
   image:		/me.JPG
