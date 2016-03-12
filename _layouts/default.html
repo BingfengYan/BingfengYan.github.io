@@ -52,11 +52,12 @@
   
   <body id="js-body">
     {% include browser-upgrade.html %}
-    {% include header.html %}
+    {% include header.html %}  
     {% include navigation-sliding.html %}
 	
-  <!--  下边这一行为swift搜索框,先放在这里！！！！！！！！！！！！！！！！！！-->
+  <!--  下边这一行为swift搜索框和RSS订阅,先放在这里！！！！！！！！！！！！！！！！！！-->
   <input type="text" class="st-default-search-input">
+  <a href="/feed.xml" target="_blank">RSS订阅</a>
   
     <div id="page-wrapper">
       {{ content }}

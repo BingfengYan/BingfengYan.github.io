@@ -7,6 +7,10 @@ teaser: 		IMG_0317.JPG
 locale:	
 url:
 
+# in oder to RSS
+username:		颜丙峰
+baseurl:        http://bingfengyan.github.io
+
 # Jekyll configuration
 
 sass:
