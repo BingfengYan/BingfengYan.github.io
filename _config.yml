@@ -9,7 +9,7 @@ url:
 
 # in oder to RSS
 username:		颜丙峰
-baseurl:        http://bingfengyan.github.io
+# baseurl:        http://bingfengyan.github.io
 
 # Jekyll configuration
 
