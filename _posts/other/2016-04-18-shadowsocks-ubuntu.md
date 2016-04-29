@@ -4,7 +4,7 @@ title:  "ubuntu安装shadowsocks"
 categories: OTHER
 comments: true
 image:
-    teaser: /CV/11.png
+    teaser: /other/shadowsocks/Shadowsocks_logo.png
 ---
 
 >> 一直使用[搬瓦工](https://bandwagonhost.com/)搭建shadowsocks服务，然后在windows和安卓手机上轻松科学上网，只要下载对应的程序即可。但后来转战ubuntu，花了我好长时间才成功。
