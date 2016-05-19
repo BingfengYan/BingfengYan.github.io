@@ -38,4 +38,3 @@ image:
 2. [作者github帐号](https://github.com/santhosh-kumar)好多好东西奥。  
 ## Person Re-Identification by Multi-Channel Parts-Based CNN with Improved Triplet Loss Function  
 1. [文章下载地址](http://www.contrib.andrew.cmu.edu/~dcheng1/papers.html)，这个是2015年龚老师那组进决赛后根据比赛写的，但是听作者意思是该文章和实际情况有点不一样，可以作为参考。源代码作者不给，文章我暂时还没有看。  
-
