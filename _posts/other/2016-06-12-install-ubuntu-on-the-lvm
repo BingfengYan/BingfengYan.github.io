@@ -1,0 +1,44 @@
+---
+layout: article
+title:  "lvm安装ubuntu"
+categories: CV
+comments: true
+image:
+    teaser: /CV/inter/54fbb2fb43166d223d93e6c9462309f79152d283.jpg
+---
+
+> 一直以来都是直接安装ubuntu但是后来遇到了空间不存，所以搜到了这篇文章
+
+1. 假如你是从没装过ubuntu的新手，这篇可以跳过去了，因为安装的部份很少，主要在讲如何架构LVM，请勿自误...我想这里大多数的人都没有碰过 LVM (Logical Volume Manager) 这个东西，因为用不到，所以不知道...但LVM对服务器来说，是一个很重要的东西，因为他保留硬盘扩充的能力。当分区容量不足时，只要加上硬盘，把空间划入分区，就可以轻易增加容量了。想一想，当你的电脑有5个人使用，/home 下有5个帐号，但是每个人给1TB空间时，你该怎麼办？假如又突然有5个人要加入，你要怎麼解决 /home 的扩充？怎样减少管理与实际硬体的成本？
+2. 说远了，我的重点不在服务器....我只是想在硬盘上各分区挤出一些空间安装ubuntu，但每个空间都是零碎的，不足以安装整个系统。所以我利用LVM的方法，把零碎空间集合起来成一个较大的空间。因为目前没有实体机可以运用，所以我用虚拟机模拟这样的状况。（重点是我也没有windows...）
+3. 现在我在第一个硬盘有两个空的分区，第二个硬盘有一个空的分区，总和大约接近 10GB。![图1](/images/CV/ubuntuonthelvm/8ba68b01a18b87d68b6fba70050828381e30fdee.jpg.png)![图2](/images/CV/ubuntuonthelvm/bfbbad8b87d6277f333f23572a381f30e824fcee.jpg.png)  
+先把他们格式化成 lvm 的 pv (physical volume)（就是实体的分区）
+![tu3](/images/CV/ubuntuonthelvm/985604fa513d269790fc193257fbb2fb4216d8e8.jpg.png)
+![tu4](/images/CV/ubuntuonthelvm/a935acec08fa513dee857db13f6d55fbb3fbd9e8.jpg.png)
+![tu5](/images/CV/ubuntuonthelvm/3ab277f40ad162d94ef4737313dfa9ec8b13cd85.jpg.png)
+3. 所以我现在有 /dev/sda3 /dev/sda6 /dev/sdb2 三个 pv
+以 sudo fdisk -l 来观察：![tu6](/images/CV/ubuntuonthelvm/ba31aa1ea8d3fd1f0b21b355324e251f94ca5fea.jpg.png)
+以 sudo pvscan 来观察：![tu7](/images/CV/ubuntuonthelvm/3ab277f40ad162d94ef9737313dfa9ec8b13cd80.jpg.png)
+4. 我要把这三個 pv 组合成一个 vg (volume group)
+使用方法为 sudo vgcreate [vg名称] [pv1] [pv2] [pv3]
+vg名称请自行命名，我暂用"vg01"![tu8](/images/CV/ubuntuonthelvm/3709032442a7d93348b9f51caf4bd11372f00181.jpg.png)
+若日后想要扩增，可以：sudo vgextend [vg名称] [pv4]  
+5. 先整理一下这边的概念![tu9](/images/CV/ubuntuonthelvm/9069f11f4134970a7c57014097cad1c8a6865df6.jpg.png)我认为，你可以把 vg 当作是一个新的磁盘。只不过这个磁盘是组合而来的。
+这个 vg 有多大？有哪些基本资料，我们可以藉由 vgdisplay 来观察。![tu10](/images/CV/ubuntuonthelvm/5598434a20a44623dbd9b40d9a22720e0df3d78c.jpg.png)
+6. 接下来我们要「分割磁盘」了！把他分割成你所需要的 lv (logical volume)。你可以把他当作我们一般分割磁盘后的分区。我预计分割成三个，一个放 /boot ，一个放 /，一个当作 swap。使用方法为： sudo lvcreate -L [大小] -n [lv名称] [vg名称]
+lv名称请自行命名，我认为容易记忆比较重要，因为日后挂载，不再是使用/dev/sdaX这样的设备名称，而是/dev/mapper/[vg名称]-[lv名称] ![tu11](/images/CV/ubuntuonthelvm/cf8ca3c379310a552229cf9bb54543a98326108d.jpg.png)
+再整理一下观念，我们现在就好像把磁盘分割一样。![tu12](/images/CV/ubuntuonthelvm/985604fa513d269790db193257fbb2fb4216d88b.jpg.png)但其实这几个分割并不是完全按照顺序来，而是类似inode对应到档案区块一样，把某些区块对应到哪个分区，所以日后可以再增加空间，而不会有顺序的问题发生。当然我们也可以sudo lvdisplay来观察他。
+![tu13](/images/CV/ubuntuonthelvm/8aab9f13b07eca809b0e2888932397dda0448394.jpg.png)
+7. 接下来就可以开始安装了，步骤与以前差不多，但在磁盘分割方面，有些差异。同样选择自行分割。![tu14](/images/CV/ubuntuonthelvm/74b262061d950a7bba805fab08d162d9f3d3c966.jpg.png)看到没？你的分区变成/dev/mapper/[vg名称]-[lv名称]了![tu15](/images/CV/ubuntuonthelvm/99fea1345982b2b7d69b28ab33adcbef77099b96.jpg.png)就如同以前安装一样，把他挂载点设定好，格式选好即可按下安装![tu16](/images/CV/ubuntuonthelvm/8fff4fa98226cffc892daeddbb014a90f703ea90.jpg.png)
+8. 其实lvm相关的指令很简单，就pv, vg, lv 三个层级
+
+
+加上create, remove, extend, reduce, scan, display几个动作，再多个lvresize而已，动手试看看，一下就上手了！
+
+
+而且，LVM 在空间扩充上的优点，也保留了日后需要时，可以依需求增减系统空间，不需要重新安装系统。
+
+
+转自：[以LVM模式安装Ubuntu（新手不要看）](http://tieba.baidu.com/p/2821916458)
+
+
