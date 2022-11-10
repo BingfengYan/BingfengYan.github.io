@@ -1,29 +1,29 @@
 # Site navigation links
 
-- title:		Home
+- title:		主页
   url:			/
   excerpt:		"主页"
   image:		/default.jpg
   
   
-- title:		cv
+- title:		计算机视觉
   url:			/cv/
   excerpt:		"计算机视觉"
   image:		/CV.jpg
   
   
   
-- title:		other
+- title:		其他
   url:			/other/
   excerpt:		"其他学术"
   image:
   
-- title:		life
+- title:		生活
   url:			/life/
   excerpt:		“生活琐事”
   image:		/life.JPG
   
-- title:		aboutme
+- title:		关于我
   url:			/about/
   excerpt:		“关于我”
   image:		/me.JPG

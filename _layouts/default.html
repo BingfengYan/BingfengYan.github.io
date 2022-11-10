@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript"
- src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
  
-  <!-- 百度统计 -->
- var _hmt = _hmt || [];
-(function() {
+<!-- 百度统计 -->
+var _hmt = _hmt || []; (function() {
   var hm = document.createElement("script");
   hm.src = "//hm.baidu.com/hm.js?723c7f3ad82fe5f163dbee63937677e7";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 
-  <!-- siwft搜索 -->
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+<!-- siwft搜索 -->
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
   (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
   e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-  
-  _st('install','4dExjPWahYGQn_x_899Y','2.0.0');
-</script>
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
+_st('install','4dExjPWahYGQn_x_899Y','2.0.0');
+</script>
   <head>
     <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
@@ -58,14 +55,21 @@
   <!--  下边这一行为swift搜索框和RSS订阅,先放在这里！！！！！！！！！！！！！！！！！！-->
   <input type="text" class="st-default-search-input">
   <a href="/feed.xml" target="_blank">RSS订阅</a>
-  
-    <div id="page-wrapper">
-      {{ content }}
-      {% include footer.html %}
-    </div>
+  <div id="page-wrapper">
+    {{ content }}
+    {% include footer.html %}
+  </div>
+  <script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
+  <script src="{{ site.url }}/js/main.js"></script>
 
-    <script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="{{ site.url }}/js/main.js"></script>
+      <script type="text/javascript">
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+        
+        _st('install','T2Csr39pBrZwxGTqyD4z','2.0.0');
+      </script>
 
   </body>
 

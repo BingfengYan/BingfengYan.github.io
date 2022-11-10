@@ -1,5 +1,5 @@
-
-<article class="tile" itemscope itemtype="http://schema.org/Article">
+{% for post in paginator.posts %}
+<article class="excerpt excerpt-c5">
     <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="post-teaser">
         {% if post.image.teaser %}
             <img src="{{ site.url }}/images/{{ post.image.teaser }}" alt="teaser" itemprop="image">
@@ -7,15 +7,16 @@
             <img src="{{ site.url }}/images/{{ site.teaser }}" alt="teaser" itemprop="image">
         {% endif %}
     </a>
-    {% if post.date %}
-        <p class="entry-date date published">
-            <time datetime="{{ post.date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
-        </p>
-    {% endif %}
     <h2 class="post-title" itemprop="name">
         <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
     </h2>
-    <p class="post-excerpt" itemprop="description">
-        {{ post.excerpt | strip_html | truncate: 160 }}
+    {% if post.date %}
+    <p class="entry-date date published">
+        <time datetime="{{ post.date | date: "%Y-%m-%d" }}" itemprop="datePublished">
+            {{ post.date | date: "%B %d, %Y" }}
+        </time>
     </p>
-  </article><!-- /.tile -->
+    {% endif %}
+</article>
+{% endfor %}
+{% include pagination.html %}

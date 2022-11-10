@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /life/
-title: "Latest Posts in *Life*"
+title: "生活"
 excerpt: 都是一些生活杂事
 ---
 

@@ -21,14 +21,16 @@ markdown: kramdown
 kramdown:
   toc_levels: 1..2
 highlighter: rouge
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-admin
 
+# 分页 默认8行
+paginate: 8
+paginate_path: "blog/page:num"
 
-paginate: 12
-paginate_path: "posts/:num"
 # Octopress configuration
 
 # my swiftype
@@ -50,7 +52,7 @@ titlecase: true
 # Site owner
 owner:
   name:			颜丙峰
-  email:		fxyaun@163.com
+  email:		bphengyan@163.com
   twitter:
   google:
     ad-client:

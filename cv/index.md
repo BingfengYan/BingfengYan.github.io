@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /cv/
-title: "Latest Posts in *cv*"
+title: "计算机视觉"
 excerpt: 这都是涉及到计算机视觉，图像处理和机器学习方面的文章
 ---
 

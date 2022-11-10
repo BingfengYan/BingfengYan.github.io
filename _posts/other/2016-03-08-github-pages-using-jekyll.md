@@ -112,7 +112,7 @@ jekyll是如何工作的
 
 {% endraw %}
 {% endhighlight %}  
-default.html包含了每个html都需要的一些标记，以及一个个liquid标记。{{ … }}是liquid中用来表示“内容”的标记，其中的对象在解析时会被替换成文件到页面中。  
+default.html包含了每个html都需要的一些标记，以及一个个liquid标记。\{\{ … \}\}是liquid中用来表示“内容”的标记，其中的对象在解析时会被替换成文件到页面中。  
 content：表示在这里的地方用子页面的内容替换。  
 现在我们来实现一个主页，在根目录下，创建一个index.html  
 {% highlight bash %}

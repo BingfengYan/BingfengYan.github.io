@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /other/
-title: "Latest Posts in *other*"
+title: "分散知识点"
 excerpt: 一些分散的知识点
 ---
 
